@@ -40,10 +40,14 @@ namespace TSheet.Forms
                 result = _workingTimeService.GetMonthlyWorkingTime(employee, month, year);
             }
 
+            dataGridView1.Rows.Clear();
+            dataGridView1.Columns.Clear();
+
             #region dataGridView1
-            // dataGridView1 columns
+           
             if (result.Count > 0)
             {
+                // dataGridView1 columns
                 dataGridView1.Columns.Add("TC", "TC No");
                 dataGridView1.Columns.Add("Name", "Ad Soyad");
 
@@ -67,6 +71,8 @@ namespace TSheet.Forms
                     };
                     dataGridView1.Columns.Add(dgc);
                 }
+                dataGridView1.Columns.Add("Date", "Puantaj Dönemi");
+
 
                 // dataGridView1 data
                 dataGridView1.Rows.Add();
@@ -77,20 +83,23 @@ namespace TSheet.Forms
                 {
                     dr.Cells[$"{item.WorkingDate.Day}"].Value = item.WorkingHours;
                 }
-                #endregion
-
-            #region dataGridView2
-                // dataGridView2 columns
-                dataGridView1.Columns.Add("WorkingDays", "Çalışma Günü  Sayısı");
-                dataGridView1.Columns.Add("HoliDays", "Tatil Günü Sayısı");
-                // dataGridView2 data
-                // feature property
+                dr.Cells["Date"].Value = $"{month}/{year}";
             }
-            #endregion
             else
             {
                 MessageBox.Show("Aranan koşullarda veri bulunamadı.");
             }
+            #endregion
+
+            #region dataGridView2
+            // dataGridView2 columns
+            //dataGridView2.Columns.Add("WorkingDays", "Çalışma Günü  Sayısı");
+            //    dataGridView2.Columns.Add("HoliDays", "Tatil Günü Sayısı");
+                // dataGridView2 data
+                // feature property
+            
+            #endregion
+            
 
 
         }

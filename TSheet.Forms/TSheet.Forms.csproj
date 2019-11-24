@@ -93,18 +93,18 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="MonthlyTallySheetForm.cs">
+    <Compile Include="Tally\MonthlyTallySheetForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MonthlyTallySheetForm.Designer.cs">
+    <Compile Include="Tally\MonthlyTallySheetForm.Designer.cs">
       <DependentUpon>MonthlyTallySheetForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TallyForm.cs">
+    <Compile Include="Tally\TallyForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TallyForm.Designer.cs">
+    <Compile Include="Tally\TallyForm.Designer.cs">
       <DependentUpon>TallyForm.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="EmployeeForms\EmployeeAddForm.resx">
@@ -125,7 +125,7 @@
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MonthlyTallySheetForm.resx">
+    <EmbeddedResource Include="Tally\MonthlyTallySheetForm.resx">
       <DependentUpon>MonthlyTallySheetForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -137,7 +137,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="TallyForm.resx">
+    <EmbeddedResource Include="Tally\TallyForm.resx">
       <DependentUpon>TallyForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
